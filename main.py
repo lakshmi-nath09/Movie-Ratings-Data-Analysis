@@ -6,7 +6,7 @@ import seaborn as sns
 # Pandas automatically handles .gz compression. 
 # If you used a .zip file, use: pd.read_csv('ratings.csv.zip', compression='zip')
 try:
-    ratings = pd.read_csv('ratings.csv.gz') 
+    ratings = pd.read_csv('ratings.csv') 
     movies = pd.read_csv('movies.csv')
     print("✅ Files loaded successfully!")
 except FileNotFoundError:
