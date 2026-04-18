@@ -1,12 +1,14 @@
 import pandas as pd
 
-# Load the data
+# 1. Load your Movies file (Capital M as per your GitHub)
 movies = pd.read_csv('movie.csv')
 
-# Add compression='gzip' so Python knows how to unzip it
-ratings = pd.read_csv('ratings.csv', compression='gzip') 
+# 2. Load the small sample we just made (No compression errors!)
+ratings = pd.read_csv('ratings_sample.csv') 
 
-# Merge and print the results
+# 3. Merge them using the movieId column
 df = pd.merge(ratings, movies, on='movieId')
-print("--- SUCCESS: DATA LOADED ---")
-print(df.head())
+
+# 4. Print the result
+print("--- SUCCESS: PROJECT EXECUTED ---")
+print(df[['title', 'rating']])
